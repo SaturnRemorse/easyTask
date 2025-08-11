@@ -8,9 +8,13 @@
 
     </header>
     <ul>
-        <li>
-            <app-task></app-task>
+        @for( task of selectedUserTasks; track task.id){
+            <li>
+            <app-task [task]="task" (complete)="onComplete($event)"></app-task>
         </li>
+
+        }
+        
     </ul>
 
 </section>
