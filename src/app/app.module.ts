@@ -9,12 +9,14 @@ import { CardComponent } from "./shared/card/card.component";
 import { NewTaskComponent } from "./tasks/new-task/new-task.component";
 import { TaskComponent } from "./tasks/task/task.component";
 import { FormsModule } from "@angular/forms";
+import { SharedModule } from "./shared/shared.module";
+import { TaskModule } from "./tasks/task.module";
 
 
 @NgModule({
-    declarations: [AppComponent, UserComponent,TasksComponent, HeaderComponent, CardComponent, NewTaskComponent, TaskComponent],
+    declarations: [AppComponent, UserComponent, HeaderComponent],
     bootstrap: [AppComponent],
-    imports:[ BrowserModule, FormsModule]
+    imports:[ BrowserModule, SharedModule, TaskModule]
 })
 export class AppModule{
 
